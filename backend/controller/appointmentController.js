@@ -2,14 +2,12 @@ import { catchAsyncErrors } from "../middlewares/catchAsyncErrors.js";
 import ErrorHandler from "../middlewares/error.js";
 import { Appointment } from "../models/appointmentSchema.js";
 import { User } from "../models/userSchema.js";
-//fdhfr
+
 export const postAppointment = catchAsyncErrors(async (req, res, next) => {
   const {
     firstName,
     lastName,
     email,
-    // phone,
-    // nic,
     dob,
     gender,
     appointment_date,
@@ -23,8 +21,6 @@ export const postAppointment = catchAsyncErrors(async (req, res, next) => {
     !firstName ||
     !lastName ||
     !email ||
-    // !phone ||
-    // !nic ||
     !dob ||
     !gender ||
     !appointment_date ||
@@ -59,8 +55,6 @@ export const postAppointment = catchAsyncErrors(async (req, res, next) => {
     firstName,
     lastName,
     email,
-    // phone,
-    // nic,
     dob,
     gender,
     appointment_date,
